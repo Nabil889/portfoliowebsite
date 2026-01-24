@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaPython, FaGitAlt, FaDatabase, FaCogs, FaChartBar, FaFileExcel } from 'react-icons/fa';
 import { SiTableau, SiJirasoftware, SiSap } from 'react-icons/si';
-import { TbCertificate, TbBrain, TbSettings } from 'react-icons/tb';
+import { TbCertificate, TbBrain,} from 'react-icons/tb';
 import { FaReact } from 'react-icons/fa';
 import { useState } from 'react';
 
