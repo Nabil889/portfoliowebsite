@@ -71,11 +71,12 @@ const About = () => {
 
   return (
     <div className="pt-20 px-4 max-w-7xl mx-auto pb-20">
+      
       {/* Header with Photo */}
-      <div className="flex items-start justify-between gap-12 mb-16">
+      <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12 mb-16">
         <div className="flex-1">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">About Me</h1>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Me</h1>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed">
             Future-focused Business & Data Analyst combining 8+ years of pharma production 
             experience with technical skills in SQL, Python, and SAP. Currently pursuing B.Sc. 
             Business Informatics and exploring AI/machine learning applications. I bring both 
@@ -87,63 +88,89 @@ const About = () => {
           <img 
             src="/mypicture.jpg" 
             alt="Nabil Aouni" 
-            className="w-48 h-48 rounded-full object-cover shadow-lg"
+            className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg"
           />
         </div>
       </div>
 
       {/* Professional Experience Timeline */}
       <div className="mb-20">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-16">Professional Journey</h2>
-        <div className="relative">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-16">Professional Journey</h2>
+        
+        {/* Desktop Timeline */}
+        <div className="hidden md:block relative">
           {/* Timeline Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300"></div>
 
           {timeline.map((item, index) => (
-  <div key={index} className="relative mb-16">
-    {/* Year on timeline */}
-    <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20">
-      <div className="w-4 h-4 bg-[#2563eb] rounded-full border-4 border-white shadow-lg mb-2"></div>
-      <span className="text-sm font-bold text-gray-900 bg-white px-3 py-1 rounded-full border-2 border-gray-200">
-        {item.year}
-      </span>
-    </div>
+            <div key={index} className="relative mb-16">
+              {/* Year on timeline */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20">
+                <div className="w-4 h-4 bg-[#2563eb] rounded-full border-4 border-white shadow-lg mb-2"></div>
+                <span className="text-sm font-bold text-gray-900 bg-white px-3 py-1 rounded-full border-2 border-gray-200">
+                  {item.year}
+                </span>
+              </div>
 
-    <div className={`flex items-center pt-16 relative ${item.side === 'right' ? 'flex-row-reverse' : ''}`}>
-      {/* Card */}
-      <div className="w-5/12 relative">
-        <div className="bg-white p-4 rounded-2xl border-2 border-gray-200 hover:border-[#2563eb] transition-all">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-xs bg-blue-100 text-[#2563eb] px-3 py-1 rounded-full">{item.type}</span>
-          </div>
-          <h3 className="text-lg font-bold text-gray-900 mb-1">{item.title}</h3>
-          <p className="text-sm font-semibold text-gray-600 mb-2">{item.company}</p>
-          <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+              <div className={`flex items-center pt-16 relative ${item.side === 'right' ? 'flex-row-reverse' : ''}`}>
+                {/* Card */}
+                <div className="w-5/12 relative">
+                  <div className="bg-white p-4 rounded-2xl border-2 border-gray-200 hover:border-[#2563eb] transition-all">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs bg-blue-100 text-[#2563eb] px-3 py-1 rounded-full">{item.type}</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">{item.title}</h3>
+                    <p className="text-sm font-semibold text-gray-600 mb-2">{item.company}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                  </div>
+                  
+                  {/* Horizontal line from card to timeline */}
+                  <div className={`absolute top-1/2 ${item.side === 'left' ? 'right-0 translate-x-full' : 'left-0 -translate-x-full'} w-[calc(100%/5*1.2)] h-0.5 bg-gray-300 z-10`}></div>
+                </div>
+
+                {/* Empty space for center line */}
+                <div className="w-2/12"></div>
+
+                {/* Empty space on other side */}
+                <div className="w-5/12"></div>
+              </div>
+            </div>
+          ))}
         </div>
-        
-        {/* Horizontal line from card to timeline */}
-        <div className={`absolute top-1/2 ${item.side === 'left' ? 'right-0 translate-x-full' : 'left-0 -translate-x-full'} w-[calc(100%/5*1.2)] h-0.5 bg-gray-300 z-10`}></div>
-      </div>
 
-      {/* Empty space for center line */}
-      <div className="w-2/12"></div>
+        {/* Mobile Timeline */}
+        <div className="md:hidden relative pl-8">
+          {/* Timeline Line */}
+          <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-gray-300"></div>
 
-      {/* Empty space on other side */}
-      <div className="w-5/12"></div>
-    </div>
-  </div>
-))}
+          {timeline.map((item, index) => (
+            <div key={index} className="relative mb-12">
+              {/* Dot */}
+              <div className="absolute left-[-1.75rem] top-6 w-4 h-4 bg-[#2563eb] rounded-full border-4 border-white shadow-lg"></div>
+
+              {/* Card */}
+              <div className="bg-white p-4 rounded-2xl border-2 border-gray-200">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-xs font-semibold text-[#2563eb]">{item.year}</span>
+                  <span className="text-xs bg-blue-100 text-[#2563eb] px-3 py-1 rounded-full">{item.type}</span>
+                </div>
+                <h3 className="text-base font-bold text-gray-900 mb-1">{item.title}</h3>
+                <p className="text-sm font-semibold text-gray-600 mb-2">{item.company}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Education */}
       <div className="mb-20">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Education</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">Education</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {education.map((item, index) => (
             <div key={index} className="bg-white p-6 rounded-2xl border-2 border-gray-200">
               <span className="text-sm font-semibold text-[#2563eb]">{item.year}</span>
-              <h3 className="text-lg font-bold text-gray-900 mt-2 mb-1">{item.degree}</h3>
+              <h3 className="text-base md:text-lg font-bold text-gray-900 mt-2 mb-1">{item.degree}</h3>
               <p className="text-sm text-gray-600 mb-2">{item.institution}</p>
               <span className="inline-block text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full">{item.status}</span>
             </div>
@@ -153,13 +180,13 @@ const About = () => {
 
       {/* Certifications */}
       <div>
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Certifications & Qualifications</h2>
-        <div className="bg-white p-8 rounded-2xl border-2 border-gray-200">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">Certifications & Qualifications</h2>
+        <div className="bg-white p-6 md:p-8 rounded-2xl border-2 border-gray-200">
           <ul className="space-y-4">
             {certifications.map((cert, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-[#2563eb] mr-3 text-xl">✓</span>
-                <span className="text-gray-700">{cert}</span>
+                <span className="text-[#2563eb] mr-3 text-xl flex-shrink-0">✓</span>
+                <span className="text-sm md:text-base text-gray-700">{cert}</span>
               </li>
             ))}
           </ul>

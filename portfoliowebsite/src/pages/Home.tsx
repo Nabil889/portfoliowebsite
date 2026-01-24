@@ -76,22 +76,22 @@ const Home = () => {
   return (
     <div className="pt-20 px-4 max-w-7xl mx-auto">
       {/* Hero Section */}
-      <div className="min-h-[70vh] flex items-center justify-between gap-12 mb-20">
+      <div className="min-h-[70vh] flex flex-col md:flex-row items-center justify-between gap-12 mb-20">
         {/* Text Left */}
         <div className="flex-1">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Nabil Aouni
           </h1>
           
-          <h2 className="text-2xl text-[#7b7b7b] font-semibold mb-3">
+          <h2 className="text-xl md:text-2xl text-[#7b7b7b] font-semibold mb-3">
             Aspiring Business & Data Analyst
           </h2>
           
-          <p className="text-lg text-[#7b7b7b] mb-6">
+          <p className="text-base md:text-lg text-[#7b7b7b] mb-6">
             GxP Pharma | SAP ECC & S/4HANA | SQL | Python | AI
           </p>
           
-          <p className="text-lg text-gray-600 leading-relaxed mb-8">
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
             Studying B.Sc. Business Informatics at IU International University 
             while developing practical skills in SAP systems, data analytics, 
             and business process optimization within GxP-regulated pharmaceutical 
@@ -100,12 +100,12 @@ const Home = () => {
           </p>
           
           {/* Buttons */}
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="https://github.com/nabil889" 
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-[#2563eb] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#1d4ed8] transition-colors"
+              className="flex items-center justify-center gap-2 bg-[#2563eb] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#1d4ed8] transition-colors"
             >
               <FaGithub className="text-xl" />
               GitHub
@@ -114,7 +114,7 @@ const Home = () => {
               href="https://linkedin.com/in/nabilaouni" 
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-[#2563eb] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#1d4ed8] transition-colors"
+              className="flex items-center justify-center gap-2 bg-[#2563eb] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#1d4ed8] transition-colors"
             >
               <FaLinkedin className="text-xl" />
               LinkedIn
@@ -127,17 +127,17 @@ const Home = () => {
           <img 
             src="/mypicture.jpg" 
             alt="Nabil Aouni" 
-            className="w-80 h-80 rounded-full object-cover shadow-lg"
+            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-lg"
           />
         </div>
       </div>
 
       {/* Core Skills Section */}
       <div className="mb-16">
-        <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">
           Core Skills
         </h3>
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {coreSkills.map((skill) => (
             <div
               key={skill.name}
@@ -170,10 +170,10 @@ const Home = () => {
 
       {/* Developing Skills Section */}
       <div className="mb-20">
-        <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">
           Developing Skills
         </h3>
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {developingSkills.map((skill) => (
             <div
               key={skill.name}

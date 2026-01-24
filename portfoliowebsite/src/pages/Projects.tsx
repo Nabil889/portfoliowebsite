@@ -29,8 +29,8 @@ const Projects = () => {
     <div className="pt-20 px-4 max-w-7xl mx-auto pb-20">
       {/* Header */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Projects</h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Projects</h1>
+        <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
           I'm currently building my portfolio with data analytics and SAP-related projects 
           using Python, SQL, Power BI, and Tableau. Check back soon for machine learning 
           and business intelligence use cases!
@@ -38,14 +38,14 @@ const Projects = () => {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {projects.map((project, index) => (
           <div 
             key={index} 
-            className="bg-white rounded-2xl border-2 border-gray-200 p-6 hover:border-[#2563eb] transition-all flex flex-col"
+            className="bg-white rounded-2xl border-2 border-gray-200 p-5 md:p-6 hover:border-[#2563eb] transition-all flex flex-col"
           >
             {/* Title */}
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
+            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
               {project.title}
             </h3>
 
@@ -70,17 +70,17 @@ const Projects = () => {
             </div>
 
             {/* Links */}
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href={project.githubLink}
-                className="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-[#2563eb] transition-colors"
+                className="flex items-center justify-center sm:justify-start gap-2 text-sm font-semibold text-gray-700 hover:text-[#2563eb] transition-colors"
               >
                 <FaGithub className="text-lg" />
                 GitHub
               </a>
               <a
                 href={project.liveLink}
-                className="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-[#2563eb] transition-colors"
+                className="flex items-center justify-center sm:justify-start gap-2 text-sm font-semibold text-gray-700 hover:text-[#2563eb] transition-colors"
               >
                 <FaExternalLinkAlt className="text-sm" />
                 Live Demo
