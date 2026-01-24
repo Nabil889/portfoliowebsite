@@ -1,20 +1,12 @@
 const About = () => {
   const timeline = [
-    {
-      year: "2025 - Present",
-      title: "SAP User & Authorization Management",
+    { 
+      year: "Feb 2025 - Present",
+      title: "SAP & IT Intern",
       company: "Siegfried AG",
       type: "Internship",
-      description: "Supporting SAP user and authorization management (ECC & S/4HANA), SoD analysis, and collaboration with departments on compliance and audit topics.",
+      description: "Primary focus on SAP user and authorization management (ECC & S/4HANA), including SoD analysis and collaboration with departments on compliance and audit topics. Additionally supporting IT service desk operations with incident management and user administration.",
       side: "left"
-    },
-    {
-      year: "Feb 2025 - Jun 2025",
-      title: "IT Service Desk",
-      company: "Siegfried AG",
-      type: "Internship",
-      description: "1st and 2nd level support, incident management, user administration including onboarding/offboarding in Active Directory.",
-      side: "right"
     },
     {
       year: "Aug 2023 - Present",
@@ -77,11 +69,11 @@ const About = () => {
         <div className="flex-1">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Me</h1>
           <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-            Future-focused Business & Data Analyst combining 8+ years of pharma production 
-            experience with technical skills in SQL, Python, and SAP. Currently pursuing B.Sc. 
-            Business Informatics and exploring AI/machine learning applications. I bring both 
-            operational understanding and analytical capabilities to turn data into strategic 
-            business value.
+            Transitioning into Business & Data Analytics with 8+ years of pharma production 
+            experience and solid knowledge in SQL, SAP, and Excel. Currently pursuing B.Sc. 
+            Business Informatics while building skills in Python, Power BI, and AI/machine 
+            learning. I combine operational expertise with growing analytical capabilities 
+            to deliver data-driven insights.
           </p>
         </div>
         <div className="flex-shrink-0">
