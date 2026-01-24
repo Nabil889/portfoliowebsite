@@ -88,7 +88,7 @@ const Home = () => {
           </h2>
           
           <p className="text-base md:text-lg text-[#7b7b7b] mb-6">
-            GxP Pharma | SAP ECC & S/4HANA | SQL | Python | AI
+            GxP Pharma | SAP ECC & S/4HANA | SQL | Python 
           </p>
           
           <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
