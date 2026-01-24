@@ -14,7 +14,7 @@ const About = () => {
       company: "Siegfried AG",
       type: "Full-time",
       description: "Ensuring GMP-compliant production processes, SAP-based documentation, continuous improvement (KVP), and leading a 15-person shift team.",
-      side: "left"
+      side: "right"
     },
     {
       year: "Oct 2021 - Aug 2023",
@@ -22,7 +22,7 @@ const About = () => {
       company: "Evonik Industries",
       type: "Full-time",
       description: "Quality assurance and process stability in chemical production and laboratory environment.",
-      side: "right"
+      side: "left"
     },
     {
       year: "Sep 2018 - Oct 2021",
@@ -30,7 +30,7 @@ const About = () => {
       company: "State Police NRW, Germany",
       type: "Full-time",
       description: "Structured analysis of complex situations, decision-making under pressure, and professional communication.",
-      side: "left"
+      side: "right"
     }
   ];
 
