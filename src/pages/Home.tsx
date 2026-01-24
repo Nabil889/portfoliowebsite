@@ -9,16 +9,6 @@ const Home = () => {
 
   const coreSkills = [
     {
-      name: 'SAP',
-      icon: <SiSap className="text-5xl text-[#0FAAFF]" />,
-      details: ['User & Authorization Management', 'ECC & S/4HANA', 'Security & SoD Analysis']
-    },
-    {
-      name: 'React',
-      icon: <FaReact className="text-5xl text-[#61DAFB]" />,
-      details: ['Component-Based Development', 'TypeScript Integration', 'Portfolio Project Experience']
-     },
-    {
       name: 'SQL',
       icon: <FaDatabase className="text-5xl text-[#00758F]" />,
       details: ['Data Queries & Analysis', 'Harvard CS50 Certificate']
@@ -29,14 +19,24 @@ const Home = () => {
       details: ['Data Analysis & Reporting', 'Pivot Tables & Formulas', 'Professional Experience']
     },
     {
-      name: 'GxP',
-      icon: <TbCertificate className="text-5xl text-[#2563eb]" />,
-      details: ['GMP-Qualified', 'Pharma Production (8+ years)', 'Regulatory Compliance']
+      name: 'SAP',
+      icon: <SiSap className="text-5xl text-[#0FAAFF]" />,
+      details: ['User & Authorization Management', 'ECC & S/4HANA', 'Security & SoD Analysis']
     },
     {
       name: 'Process Optimization',
       icon: <FaCogs className="text-5xl text-[#7b7b7b]" />,
       details: ['Continuous Improvement (KVP)', 'Process Analysis & Optimization', 'Cross-functional Collaboration']
+    },
+    {
+      name: 'React',
+      icon: <FaReact className="text-5xl text-[#61DAFB]" />,
+      details: ['Component-Based Development', 'TypeScript Integration', 'Portfolio Project Experience']
+     },
+    {
+      name: 'GxP',
+      icon: <TbCertificate className="text-5xl text-[#2563eb]" />,
+      details: ['GMP-Qualified', 'Pharma Production (8+ years)', 'Regulatory Compliance']
     },
     {
       name: 'Jira/Confluence',
@@ -84,11 +84,11 @@ const Home = () => {
           </h1>
           
           <h2 className="text-xl md:text-2xl text-[#7b7b7b] font-semibold mb-3">
-            Aspiring Business & Data Analyst
+            Building a Career in Business & Data Analytics
           </h2>
           
           <p className="text-base md:text-lg text-[#7b7b7b] mb-6">
-            GxP Pharma | SAP ECC & S/4HANA | SQL | Python 
+            Data Analytics | SQL | Python | Business Intelligence | SAP
           </p>
           
           <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
