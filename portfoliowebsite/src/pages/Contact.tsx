@@ -6,28 +6,28 @@ const Contact = () => {
       <div className="w-full">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Get in Touch
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              I'm looking for opportunities in Business & Data Analytics.
-              My background includes pharma/GxP and SAP, but I'm open to
-              various industries and technologies. Feel free to reach out!
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+            I'm looking for opportunities in Business & Data Analytics.
+            My background includes pharma/GxP and SAP, but I'm open to
+            various industries and technologies. Feel free to reach out!
           </p>
         </div>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-[1fr_auto] gap-12 mb-12">
+        <div className="flex flex-col lg:grid lg:grid-cols-[1fr_auto] gap-8 lg:gap-12 mb-12">
           {/* Left: 3 Cards */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6 md:gap-8">
             {/* Email */}
             <a
               href="mailto:nabilaouni1989@gmail.com"
-              className="flex flex-col items-center p-6 bg-white rounded-2xl border-2 border-transparent hover:border-[#2563eb] hover:bg-blue-50 transition-all"
+              className="flex flex-col items-center p-5 md:p-6 bg-white rounded-2xl border-2 border-transparent hover:border-[#2563eb] hover:bg-blue-50 transition-all"
             >
-              <FaEnvelope className="text-4xl text-[#2563eb] mb-3" />
+              <FaEnvelope className="text-3xl md:text-4xl text-[#2563eb] mb-3" />
               <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-              <p className="text-sm text-gray-600 text-center">nabilaouni1989@gmail.com</p>
+              <p className="text-sm text-gray-600 text-center break-all">nabilaouni1989@gmail.com</p>
             </a>
 
             {/* LinkedIn */}
@@ -35,9 +35,9 @@ const Contact = () => {
               href="https://linkedin.com/in/nabilaouni"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center p-6 bg-white rounded-2xl border-2 border-transparent hover:border-[#2563eb] hover:bg-blue-50 transition-all"
+              className="flex flex-col items-center p-5 md:p-6 bg-white rounded-2xl border-2 border-transparent hover:border-[#2563eb] hover:bg-blue-50 transition-all"
             >
-              <FaLinkedin className="text-4xl text-[#0077B5] mb-3" />
+              <FaLinkedin className="text-3xl md:text-4xl text-[#0077B5] mb-3" />
               <h3 className="font-semibold text-gray-900 mb-1">LinkedIn</h3>
               <p className="text-sm text-gray-600">Connect with me</p>
             </a>
@@ -47,17 +47,17 @@ const Contact = () => {
               href="https://github.com/nabil889"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center p-6 bg-white rounded-2xl border-2 border-transparent hover:border-[#2563eb] hover:bg-blue-50 transition-all"
+              className="flex flex-col items-center p-5 md:p-6 bg-white rounded-2xl border-2 border-transparent hover:border-[#2563eb] hover:bg-blue-50 transition-all"
             >
-              <FaGithub className="text-4xl text-gray-900 mb-3" />
+              <FaGithub className="text-3xl md:text-4xl text-gray-900 mb-3" />
               <h3 className="font-semibold text-gray-900 mb-1">GitHub</h3>
               <p className="text-sm text-gray-600">View my projects</p>
             </a>
           </div>
 
-          {/* Right: Info Box - vertically centered */}
-          <div className="flex items-center">
-            <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 w-80">
+          {/* Right: Info Box */}
+          <div className="flex items-center justify-center lg:justify-start">
+            <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 w-full max-w-md lg:w-80">
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-2 text-gray-700">
                   <FaMapMarkerAlt className="text-[#2563eb] flex-shrink-0" />
