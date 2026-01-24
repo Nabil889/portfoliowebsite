@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin, FaPython, FaGitAlt, FaDatabase, FaCogs, FaChartBar, FaFileExcel } from 'react-icons/fa';
 import { SiTableau, SiJirasoftware, SiSap } from 'react-icons/si';
 import { TbCertificate, TbBrain, TbSettings } from 'react-icons/tb';
+import { FaReact } from 'react-icons/fa';
 import { useState } from 'react';
 
 const Home = () => {
@@ -12,6 +13,11 @@ const Home = () => {
       icon: <SiSap className="text-5xl text-[#0FAAFF]" />,
       details: ['User & Authorization Management', 'ECC & S/4HANA', 'Security & SoD Analysis']
     },
+    {
+      name: 'React',
+      icon: <FaReact className="text-5xl text-[#61DAFB]" />,
+      details: ['Component-Based Development', 'TypeScript Integration', 'Portfolio Project Experience']
+     },
     {
       name: 'SQL',
       icon: <FaDatabase className="text-5xl text-[#00758F]" />,
@@ -41,7 +47,7 @@ const Home = () => {
       name: 'Git/GitHub',
       icon: <FaGitAlt className="text-5xl text-[#F05032]" />,
       details: ['Version Control', 'Project Management', 'Active User']
-    }
+    },
   ];
 
   const developingSkills = [
