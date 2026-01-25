@@ -5,7 +5,7 @@ const Projects = () => {
     {
       title: "Personal Portfolio Website",
       description: "Responsive portfolio website showcasing my skills, experience, and projects. Built from scratch with modern web technologies.",
-      techStack: ["React", "Vite", "TypeScript", "Tailwind CSS"],
+      techStack: ["React", "TypeScript", "Tailwind CSS"],
       githubLink: "https://github.com/nabil889/portfoliowebsite",
       liveLink: "https://portfoliowebsite-pied-five.vercel.app"
     },
