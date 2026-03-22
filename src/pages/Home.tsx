@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaPython, FaGitAlt, FaDatabase, FaCogs, FaChartBar, FaFileExcel } from 'react-icons/fa';
 import { SiTableau, SiJirasoftware, SiSap } from 'react-icons/si';
-import { TbCertificate, TbBrain,} from 'react-icons/tb';
+import { TbCertificate, TbBrain } from 'react-icons/tb';
 import { FaReact } from 'react-icons/fa';
 import { useState } from 'react';
 
@@ -11,7 +11,12 @@ const Home = () => {
     {
       name: 'SQL',
       icon: <FaDatabase className="text-5xl text-[#00758F]" />,
-      details: ['Data Queries & Analysis', 'Harvard CS50 Certificate']
+      details: ['Data Queries & Analysis', 'Database Design', 'Harvard CS50 Certificate']
+    },
+    {
+      name: 'Python',
+      icon: <FaPython className="text-5xl text-[#3776AB]" />,
+      details: ['Data Analysis', 'Scripting & Automation', 'Currently Learning']
     },
     {
       name: 'Excel',
@@ -24,19 +29,14 @@ const Home = () => {
       details: ['User & Authorization Management', 'ECC & S/4HANA', 'Security & SoD Analysis']
     },
     {
-      name: 'Process Optimization',
-      icon: <FaCogs className="text-5xl text-[#7b7b7b]" />,
-      details: ['Continuous Improvement (KVP)', 'Process Analysis & Optimization', 'Cross-functional Collaboration']
-    },
-    {
-      name: 'React',
-      icon: <FaReact className="text-5xl text-[#61DAFB]" />,
-      details: ['Component-Based Development', 'TypeScript Integration', 'Portfolio Project Experience']
-     },
-    {
       name: 'GxP',
       icon: <TbCertificate className="text-5xl text-[#2563eb]" />,
       details: ['GMP-Qualified', 'Pharma Production (8+ years)', 'Regulatory Compliance']
+    },
+    {
+      name: 'Process Optimization',
+      icon: <FaCogs className="text-5xl text-[#7b7b7b]" />,
+      details: ['Continuous Improvement (KVP)', 'Process Analysis & Optimization', 'Cross-functional Collaboration']
     },
     {
       name: 'Jira/Confluence',
@@ -52,24 +52,24 @@ const Home = () => {
 
   const developingSkills = [
     {
-      name: 'Python',
-      icon: <FaPython className="text-5xl text-[#3776AB]" />,
-      details: ['Currently Learning']
+      name: 'Machine Learning',
+      icon: <TbBrain className="text-5xl text-[#FF6B6B]" />,
+      details: ['Currently Learning', 'Scikit-learn', 'Model Development']
     },
     {
       name: 'Power BI',
       icon: <FaChartBar className="text-5xl text-[#F2C811]" />,
-      details: ['Currently Learning']
+      details: ['Currently Learning', 'Dashboard Creation', 'Data Visualization']
     },
     {
       name: 'Tableau',
       icon: <SiTableau className="text-5xl text-[#E97627]" />,
-      details: ['Planned Next']
+      details: ['Planned Next', 'Data Visualization']
     },
     {
-      name: 'Machine Learning',
-      icon: <TbBrain className="text-5xl text-[#FF6B6B]" />,
-      details: ['Planned Next']
+      name: 'React',
+      icon: <FaReact className="text-5xl text-[#61DAFB]" />,
+      details: ['Component-Based Development', 'TypeScript Integration', 'Portfolio Project Experience']
     }
   ];
 
@@ -84,19 +84,17 @@ const Home = () => {
           </h1>
           
           <h2 className="text-xl md:text-2xl text-[#7b7b7b] font-semibold mb-3">
-            Building a Career in Business & Data Analytics
+            Data Analyst | Data Science Enthusiast
           </h2>
           
           <p className="text-base md:text-lg text-[#7b7b7b] mb-6">
-            Data Analytics | SQL | Python | Business Intelligence | SAP
+            Data Analytics | SQL | Python | AI/ML
           </p>
           
           <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
-            Studying B.Sc. Business Informatics at IU International University 
-            while developing practical skills in SAP systems, data analytics, 
-            and business process optimization within GxP-regulated pharmaceutical 
-            environments, with growing interest in AI and machine learning for 
-            data-driven decision making.
+            Data Analyst leveraging SQL and Python for industrial analytics at Siegfried AG. 
+            Studying B.Sc. Business Informatics and building expertise in machine learning 
+            and AI to transition into data science.
           </p>
           
           {/* Buttons */}
@@ -123,7 +121,7 @@ const Home = () => {
         </div>
 
         {/* Photo Right */}
-        <div className="flex-shrink-0">
+        <div className="shrink-0">
           <img 
             src="/mypicture.jpg" 
             alt="Nabil Aouni" 

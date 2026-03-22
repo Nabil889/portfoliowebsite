@@ -1,7 +1,15 @@
 const About = () => {
   const timeline = [
+    {
+      year: "May 2026 - Present",
+      title: "Data Analyst",
+      company: "Siegfried AG, Zofingen",
+      type: "Full-time",
+      description: "Analyzing industrial and energy data using SQL and Python. Working with Cognite Data Fusion, Visplore, and Aveva PI systems to deliver insights for process optimization and energy analytics. Creating dashboards and reports to support data-driven decision making across production operations.",
+      side: "right"
+    },
     { 
-      year: "Feb 2025 - Present",
+      year: "Feb 2025 - Feb 2026",
       title: "SAP & IT Intern",
       company: "Siegfried AG",
       type: "Internship",
@@ -9,7 +17,7 @@ const About = () => {
       side: "left"
     },
     {
-      year: "Aug 2023 - Present",
+      year: "Aug 2023 - May 2026",
       title: "Operator & Deputy Shift Leader",
       company: "Siegfried AG",
       type: "Full-time",
@@ -56,9 +64,24 @@ const About = () => {
   ];
 
   const certifications = [
-    "CS50's Introduction to Databases with SQL - Harvard University",
-    "GMP Qualification (Regulated Pharmaceutical Production)",
-    "Continuous Improvement Processes (KVP)"
+    {
+      name: "Cognite Data Fusion Fundamentals",
+      issuer: "Cognite",
+      date: "Feb. 2026",
+      link: "https://verify.skilljar.com/c/vzgvyzrz2u8o"
+    },
+    {
+      name: "CS50's Introduction to Databases with SQL",
+      issuer: "Harvard University",
+      date: "2024",
+      link: "https://certificates.cs50.io/5349c114-8498-4e51-aea3-30dfcdb4679b.pdf?size=letter"
+    },
+    {
+      name: "GMP Qualification (Regulated Pharmaceutical Production)",
+      issuer: "Siegfried AG",
+      date: null,
+      link: null
+    }
   ];
 
   return (
@@ -69,14 +92,12 @@ const About = () => {
         <div className="flex-1">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Me</h1>
           <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-            Transitioning into Business & Data Analytics with 8+ years of pharma production 
-            experience and solid knowledge in SQL, SAP, and Excel. Currently pursuing B.Sc. 
-            Business Informatics while building skills in Python, Power BI, and AI/machine 
-            learning. I combine operational expertise with growing analytical capabilities 
-            to deliver data-driven insights.
+            Data Analyst with 8+ years of pharma production experience, now working with 
+            SQL and Python to drive data-driven decisions. Pursuing B.Sc. Business Informatics 
+            while expanding expertise in machine learning and AI applications to advance into data science.
           </p>
         </div>
-        <div className="flex-shrink-0">
+        <div className="shrink-0">
           <img 
             src="/mypicture.jpg" 
             alt="Nabil Aouni" 
@@ -138,7 +159,7 @@ const About = () => {
           {timeline.map((item, index) => (
             <div key={index} className="relative mb-12">
               {/* Dot */}
-              <div className="absolute left-[-1.75rem] top-6 w-4 h-4 bg-[#2563eb] rounded-full border-4 border-white shadow-lg"></div>
+              <div className="absolute -left-7 top-6 w-4 h-4 bg-[#2563eb] rounded-full border-4 border-white shadow-lg"></div>
 
               {/* Card */}
               <div className="bg-white p-4 rounded-2xl border-2 border-gray-200">
@@ -177,8 +198,25 @@ const About = () => {
           <ul className="space-y-4">
             {certifications.map((cert, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-[#2563eb] mr-3 text-xl flex-shrink-0">✓</span>
-                <span className="text-sm md:text-base text-gray-700">{cert}</span>
+                <span className="text-[#2563eb] mr-3 text-xl shrink-0">✓</span>
+                <div className="text-sm md:text-base text-gray-700">
+                  {cert.link ? (
+                    <a 
+                      href={cert.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-[#2563eb] hover:font-semibold transition-all cursor-pointer"
+                    >
+                      {cert.name} - {cert.issuer}
+                      {cert.date && ` (${cert.date})`}
+                    </a>
+                  ) : (
+                    <span>
+                      {cert.name} - {cert.issuer}
+                      {cert.date && ` (${cert.date})`}
+                    </span>
+                  )}
+                </div>
               </li>
             ))}
           </ul>

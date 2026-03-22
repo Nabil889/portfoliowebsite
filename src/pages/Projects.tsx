@@ -31,9 +31,9 @@ const Projects = () => {
       <div className="text-center mb-16">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Projects</h1>
         <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-          I'm currently building my portfolio with data analytics and SAP-related projects 
-          using Python, SQL, Power BI, and Tableau. Check back soon for machine learning 
-          and business intelligence use cases!
+          Building my portfolio with data analytics and data science projects using 
+          Python, SQL, and machine learning. More projects coming soon focused on 
+          AI applications and predictive analytics!
         </p>
       </div>
 
@@ -50,7 +50,7 @@ const Projects = () => {
             </h3>
 
             {/* Description */}
-            <p className="text-sm text-gray-600 mb-4 flex-grow">
+            <p className="text-sm text-gray-600 mb-4 grow">
               {project.description}
             </p>
 

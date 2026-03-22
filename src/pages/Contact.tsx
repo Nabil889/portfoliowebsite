@@ -7,12 +7,12 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Get in Touch
+            Available for Projects
           </h1>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            I'm looking for opportunities in Business & Data Analytics.
-            My background includes pharma/GxP and SAP, but I'm open to
-            various industries and technologies. Feel free to reach out!
+            I'm available for freelance projects in data analytics, business intelligence, 
+            and web development. Whether you need help with data visualization, dashboard 
+            creation, or building a professional website - let's discuss your project!
           </p>
         </div>
 
@@ -60,12 +60,12 @@ const Contact = () => {
             <div className="bg-white rounded-2xl p-6 md:p-8 border-2 border-gray-200 w-full max-w-md lg:w-80">
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-2 text-gray-700">
-                  <FaMapMarkerAlt className="text-[#2563eb] flex-shrink-0" />
+                  <FaMapMarkerAlt className="text-[#2563eb] shrink-0" />
                   <span className="text-sm">Based in Rothrist, Aargau, Switzerland</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-700">
-                  <FaBriefcase className="text-[#2563eb] flex-shrink-0" />
-                  <span className="text-sm">Open to full-time positions and internships in German-speaking regions (Switzerland & Germany)</span>
+                  <FaBriefcase className="text-[#2563eb] shrink-0" />
+                  <span className="text-sm">Open for freelance projects, consulting and collaborations</span>
                 </div>
               </div>
             </div>
