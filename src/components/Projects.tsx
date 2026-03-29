@@ -3,18 +3,18 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 const Projects = () => {
   const projects = [
     {
-      title: "Personal Portfolio Website",
-      description: "Responsive portfolio website showcasing my skills, experience, and projects. Built from scratch with modern web technologies.",
-      techStack: ["React", "Vite", "TypeScript", "Tailwind CSS"],
-      githubLink: "https://github.com/Nabil889/portfoliowebsite",
-      liveLink: "https://portfoliowebsite-pied-five.vercel.app"
+      title: "Jankovic Coaching Website",
+      description: "Professional business website for a mental coaching expert. Features service showcase, expertise presentation, and client inquiry system to connect with potential clients.",
+      techStack: ["React", "TypeScript", "Tailwind CSS"],
+      githubLink: "#",
+      liveLink: "https://www.nikolajankovic.ch"
     },
     {
-      title: "Coming Soon",
-      description: "More projects on the way — focused on data analytics, machine learning, and AI applications.",
-      techStack: ["Python", "SQL", "ML"],
-      githubLink: "#",
-      liveLink: "#"
+      title: "Personal Portfolio Website",
+      description: "Responsive portfolio website showcasing my skills, experience, and projects. Built from scratch with modern web technologies.",
+      techStack: ["React", "TypeScript", "Tailwind CSS"],
+      githubLink: "https://github.com/Nabil889/portfoliowebsite",
+      liveLink: "https://portfoliowebsite-pied-five.vercel.app"
     },
     {
       title: "Coming Soon",
@@ -34,7 +34,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 px-8 md:px-16">
+    <section id="projects" className="py-20 px-8 md:px-16" style={{ backgroundColor: 'var(--color-section-light)' }}>
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -91,30 +91,34 @@ const Projects = () => {
 
               {/* Links */}
               <div className="flex gap-4 pt-2" style={{ borderTop: '1px solid rgba(30,58,95,0.08)' }}>
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm font-semibold transition-all duration-200"
-                  style={{ color: 'rgba(30,58,95,0.6)' }}
-                  onMouseEnter={e => (e.currentTarget.style.color = '#1d4ed8')}
-                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(30,58,95,0.6)')}
-                >
-                  <FaGithub className="text-lg" />
-                  GitHub
-                </a>
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm font-semibold transition-all duration-200"
-                  style={{ color: 'rgba(30,58,95,0.6)' }}
-                  onMouseEnter={e => (e.currentTarget.style.color = '#1d4ed8')}
-                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(30,58,95,0.6)')}
-                >
-                  <FaExternalLinkAlt className="text-sm" />
-                  Live Demo
-                </a>
+                {project.githubLink !== "#" && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm font-semibold transition-all duration-200"
+                    style={{ color: 'rgba(30,58,95,0.6)' }}
+                    onMouseEnter={e => (e.currentTarget.style.color = '#1d4ed8')}
+                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(30,58,95,0.6)')}
+                  >
+                    <FaGithub className="text-lg" />
+                    GitHub
+                  </a>
+                )}
+                {project.liveLink !== "#" && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm font-semibold transition-all duration-200"
+                    style={{ color: 'rgba(30,58,95,0.6)' }}
+                    onMouseEnter={e => (e.currentTarget.style.color = '#1d4ed8')}
+                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(30,58,95,0.6)')}
+                  >
+                    <FaExternalLinkAlt className="text-sm" />
+                    Live Demo
+                  </a>
+                )}
               </div>
             </div>
           ))}
